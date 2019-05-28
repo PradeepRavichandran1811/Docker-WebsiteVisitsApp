@@ -1,0 +1,10 @@
+#Author: Pradeep Ravichandran
+version: "3"
+services: 
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: always #restarts the container everytime it stops
+    build: . #building our container from Dockerfile in our local system
+    ports:
+      - "8002:8002"
